@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: tweetapp-pepoc-test2
-        image: 960456129040.dkr.ecr.us-east-1.amazonaws.com/tweetapp-pepoc-test2:latest
+        image: 960456129040.dkr.ecr.us-east-1.amazonaws.com/tweetapp2-pepoc-test2:latest
         ports:
           - name: http
             containerPort: 80
