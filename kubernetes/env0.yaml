@@ -25,7 +25,7 @@ deploy:
                 echo "Result is TRUE, breaking out of loop"
                 break
               else
-                echo "Result is not TRUE, sleeping for 5 seconds..."
+                echo "Result is not True, sleeping for 5 seconds..."
                 sleep 5
               fi
             done
