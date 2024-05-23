@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: tweetapp-pepoc-test2
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app.kubernetes.io/name: tweetapp-pepoc-test2
