@@ -11,4 +11,6 @@ allow {
     input.request.kind.kind == "Deployment"
     replicas := input.request.object.spec.replicas
     replicas <= 3
+    approved := input.request.object.metadata.annotations.approved
+    approved >= 1
 }

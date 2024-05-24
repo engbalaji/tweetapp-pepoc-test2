@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tweetapp-pepoc-test2
-  namespace: default
+  namespace: development
   labels:
     app.kubernetes.io/name: tweetapp-pepoc-test2
 spec:
