@@ -1,0 +1,21 @@
+app:
+  name: tweetapp-pepoc-test2
+
+namespace: development
+
+replicas: 4
+
+image:
+  repository: 960456129040.dkr.ecr.us-east-1.amazonaws.com/tweetapp2-pepoc-test2
+  tag: latest
+
+containerPort: 80
+
+service:
+  name: tweetapp-pepoc-test2
+  type: LoadBalancer
+  protocol: TCP
+  port: 80
+  targetPort: http
+
+namespace: development

@@ -1,0 +1,4 @@
+apiVersion: v2
+name: tweetapp-pepoc-test2
+description: A Helm chart for tweetapp-pepoc-test2 app
+version: 0.1.0
