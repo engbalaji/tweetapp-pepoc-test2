@@ -1,37 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.app.name }}
-  namespace: {{ .Values.namespace }}
+  name: tweetapp-pepoc-test2
+  namespace: development
   labels:
-    app.kubernetes.io/name: {{ .Values.app.name }}
+    app.kubernetes.io/name: tweetapp-pepoc-test2
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: 4
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ .Values.app.name }}
+      app.kubernetes.io/name: tweetapp-pepoc-test2
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ .Values.app.name }}
+        app.kubernetes.io/name: tweetapp-pepoc-test2
     spec:
       containers:
-      - name: {{ .Values.app.name }}
-        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+      - name: tweetapp-pepoc-test2
+        image: 960456129040.dkr.ecr.us-east-1.amazonaws.com/tweetapp2-pepoc-test2:latest
         ports:
           - name: http
-            containerPort: {{ .Values.containerPort }}
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: {{ .Values.service.name }}
-  namespace: {{ .Values.namespace }}
-spec:
-  type: {{ .Values.service.type }}
-  selector:
-    app.kubernetes.io/name: {{ .Values.service.name }}
-  ports:
-    - protocol: {{ .Values.service.protocol }}
-      port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.targetPort }}
+            containerPort: 80
