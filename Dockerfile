@@ -1,7 +1,7 @@
 FROM nginx:latest
 
 COPY index.html /usr/share/nginx/html
-COPY TNLlogo.png /usr/share/nginx/html
+COPY WyndD_logo.png /usr/share/nginx/html
 
 EXPOSE 80 443 	
 
